@@ -1,20 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ContosoPizza.Pages
+namespace ContosoPizza.Pages;
+
+public class IndexModel(ILogger<IndexModel> logger) : PageModel
 {
-    public class IndexModel : PageModel
+    readonly ILogger<IndexModel> _logger = logger;
+
+    public void OnGet()
     {
-        private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
-
-        public void OnGet()
-        {
-
-        }
     }
 }

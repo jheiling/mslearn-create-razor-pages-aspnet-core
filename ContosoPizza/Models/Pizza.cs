@@ -8,7 +8,9 @@ public class Pizza
 
     [Required]
     public string? Name { get; set; }
+
     public PizzaSize Size { get; set; }
+    
     public bool IsGlutenFree { get; set; }
 
     [Range(0.01, 9999.99)]

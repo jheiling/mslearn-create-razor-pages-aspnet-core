@@ -7,8 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<PizzaContext>(options =>
-    options.UseSqlite("Data Source=ContosoPizza.db"));
+builder.Services.AddDbContext<PizzaContext>(options => options.UseSqlite("Data Source=ContosoPizza.db"));
 
 var app = builder.Build();
 
@@ -22,11 +21,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
-
 app.MapRazorPages();
 
 app.Run();
